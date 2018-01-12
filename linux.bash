@@ -70,3 +70,6 @@ ls ECF9* | wc -l
 
 *MODIFICAR ARQUIVOS VIA SSH
 ssh 192.168.1.210 'rm /Zanthus/Zeus/ctsat/ZMWS1901.CFG'
+
+*tamanho total do diretório*
+for dirs in $(ls --color=never -l | grep "^d" | awk '{print $9}'); do du -hs $dirs;done
